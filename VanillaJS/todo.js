@@ -19,7 +19,7 @@ function deleteToDo(event) {
   const cleanToDos = toDos.filter(function(toDo){     // fiter는 true인 값만 모아서 새로운 배열을 만든다.
     return toDo.id !== parseInt(li.id);               // 그래서 toDo.id와 li.id가 다른 것들로 배열을 새로 만든다.
   });
-  toDos = cleanToDos                                  // 새로만들배열(cleanToDos)를 다시 toDos배열에 담아서
+  toDos = cleanToDos                                   // 새로만들배열(cleanToDos)를 다시 toDos배열에 담아서
   saveToDos();                                        // 저장한다.
 }
 
@@ -36,7 +36,7 @@ function paintToDo(text) {
   const delBtn = document.createElement("button");  // 버튼을 만들고
   const span = document.createElement("span");      // span을 만들고
   const newId = toDos.length + 1;                   // id값을 지정을 위한 상수.
-  delBtn.innerText = "❌";                          // delBtn에 X text를 삽입
+  delBtn.innerText = "❌";                           // delBtn에 X text를 삽입
   delBtn.addEventListener("click", deleteToDo);     //  delBtn에 click event 삽입
   span.innerText = text;                            // span에 text 넣을 수 있도록 설정
   li.appendChild(delBtn);                           // delBtn을 li에 자식으로 추가
